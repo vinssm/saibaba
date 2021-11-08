@@ -3,6 +3,7 @@
     --white: #fff;
     --yellow: #fce138;
     --orange: #ec8a44;
+    --grey: #7a7a7a;
     --DarkOrange: #ff6a00;
     --border-radius: 50px;
   }
@@ -20,6 +21,7 @@
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
+    font-family: play;
   }
   
   h1 {
@@ -33,6 +35,7 @@
   h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   }
   
   header {
@@ -74,16 +77,36 @@
     font-size: 36px;
     text-align: center;
     text-decoration: none;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   }
   
-  /* pseudo class */
-  nav a:hover {
+/*  active css */
+  .indactive {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: var(--grey);
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  /*  active css */
+  .hdnav {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: var(--white);
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  /* pseudo class and active */
+  nav a:hover, .active {
     background-color: var(--white);
     color: var(--orange);
     border-radius: 15px;
   }
-  
+
   main {
     display: flex;
     flex-wrap: wrap;
@@ -114,11 +137,12 @@
   
   .box {
     border-style: solid;
+    border-color: #ec8a44;
     border-width: 1px;
     border-radius: var(--border-radius);
     padding: 15px;
     flex: 0 0 300px;
-    box-shadow: 10px 10px 5px #aaaaaa;
+    box-shadow: 10px 10px 5px #bbbaba;
     margin: 20px;
   }
   
@@ -133,7 +157,8 @@
   }
   
   .box > img {
-    width: 100%;
+    width: 268px ;
+    height: 350px;
   }
 
   .button{
@@ -148,6 +173,8 @@
     padding: 15px 32px;
     font-size: 16px;
     color: var(--white);
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
   }
   
   .center{
